@@ -9,6 +9,10 @@ function App() {
     <ChakraProvider>
       <Container
         py={16}
+        maxW='4xl'
+        display='flex'
+        flexDirection='column'
+        gap={8}
       >
         <Header />
         <Game />

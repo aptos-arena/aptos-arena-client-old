@@ -6,14 +6,12 @@ import { useUnityContext, Unity } from 'react-unity-webgl';
 
 const Game: React.FC = () => {
 
-    const { unityProvider, isLoaded } = useUnityContext({
+    const { unityProvider } = useUnityContext({
         loaderUrl: "/build/Shooter.loader.js",
         dataUrl: "/build/Shooter.data",
         frameworkUrl: "/build/Shooter.framework.js",
         codeUrl: "/build/Shooter.wasm"
     });
-
-    console.log(isLoaded);
     
     return (
         <Card

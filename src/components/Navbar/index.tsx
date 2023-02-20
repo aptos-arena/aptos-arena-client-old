@@ -3,11 +3,9 @@ import React from 'react';
 import {
     Flex,
     HStack,
-    Text
 } from '@chakra-ui/react'
 
 import ConnectWallet from './ConnectWallet';
-import ColorModeToggle from './ColorModeToggle';
 
 export const navbarHeight = 20;
   
@@ -25,18 +23,12 @@ const Navbar : React.FC = () => {
             alignItems='center'
             p={4}
         >
-            <Text
-                fontWeight='bold'
-                fontSize='2xl'
-            >
-                Pontem Smash
-            </Text>
             <HStack 
                 flex={1}
                 justifyContent='flex-end'
             >
                 <ConnectWallet />
-                <ColorModeToggle />
+                {/* <ColorModeToggle /> */}
             </HStack>
         </Flex>
     );

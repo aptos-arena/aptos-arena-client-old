@@ -55,10 +55,13 @@ const ConnectWallet: React.FC = () => {
     const mobileView = useBreakpointValue({ base: true, sm: false })
 
     return (
-        <Menu>
+        <Menu
+            size={'sm'}
+        >
             <MenuButton
                 py={2}
                 transition="all 0.3s"
+                size='sm'
                 _focus={{ boxShadow: 'none' }}
                 as={mobileView ? IconButton : Button} 
                 colorScheme={connected ? 'brand': 'gray'}
@@ -67,19 +70,29 @@ const ConnectWallet: React.FC = () => {
                 leftIcon={!mobileView ? <FaWallet /> : undefined}
                 icon={mobileView ? <FaWallet /> : undefined}
             >
-                {(connected ? ellipsize(account?.address?.toString()) : 'Connect Wallet')}
+                {(connected ? ellipsize(account?.address?.toString().slice(2), 4, 4) : 'Connect Wallet')}
             </MenuButton>
-            <MenuList>
+            <MenuList
+                bg='navy.800'
+            >
                 {
                     connected ? (
                         <>
                             <MenuItem
                                 onClick={copy}
+                                bg='transparent'
+                                _hover={{
+                                    bg: 'whiteAlpha.100',
+                                }}
                             >
                                 Copy Address
                             </MenuItem>
                             <MenuItem
                                 onClick={() => disconnect()}
+                                bg='transparent'
+                                _hover={{
+                                    bg: 'whiteAlpha.100',
+                                }}
                             >
                                 Disconnect
                             </MenuItem>
@@ -92,6 +105,10 @@ const ConnectWallet: React.FC = () => {
                                 icon={<Image src={wallet.adapter.icon} boxSize={6} alt={wallet.adapter.name} />}
                                 fontWeight="medium"
                                 alignItems='center'
+                                bg='transparent'
+                                _hover={{
+                                    bg: 'whiteAlpha.100',
+                                }}
                             >
                                 <Flex
                                     justifyContent='space-between'

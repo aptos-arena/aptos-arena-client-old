@@ -1,18 +1,17 @@
-import { Text, VStack } from '@chakra-ui/react'
 import React from 'react'
+
+import { Heading, VStack } from '@chakra-ui/react'
 
 const Header: React.FC = () => {
   return (
     <VStack>
-        <Text
-            fontSize="2xl"
+        <Heading
+            fontSize="4xl"
             fontWeight="bold"
+            color='blue.100'
         >
-            Welcome to the Pontem Arena
-        </Text>
-        <Text>
-            Team up with your favorite Aptos NFT collection to compete for glory and prizes!
-        </Text>
+            Aptos Arena
+        </Heading>
     </VStack>
   )
 }

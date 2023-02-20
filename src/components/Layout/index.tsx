@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Box, Container, useColorModeValue } from '@chakra-ui/react'
-import Navbar, { navbarHeight } from '../Navbar'
+import Navbar, { navbarHeight } from '../Navbar';
 
 interface Props {
     children: React.ReactNode
@@ -9,7 +9,7 @@ interface Props {
 
 const Layout: React.FC<Props> = ({ children }) => {
 
-    const bgColor = useColorModeValue('gray.50', 'gray.900');
+    const bgColor = useColorModeValue('gray.50', 'navy.900');
 
     return (
         <Box
@@ -17,15 +17,15 @@ const Layout: React.FC<Props> = ({ children }) => {
             minWidth='100vw'
             bg={bgColor}
         >
+            <Navbar />
             <Container
                 maxW='4xl'
                 display='flex'
                 flexDirection='column'
                 pt={navbarHeight + 8}
-                pb={8}
+                pb={16}
                 gap={8}
             >
-                <Navbar />
                 {children}
             </Container>
         </Box>

@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-import { ChakraProvider } from '@chakra-ui/react';
-
 import Game from './components/Game';
 
 import {
@@ -41,13 +39,11 @@ const App: React.FC = () => {
       wallets={wallets}
       autoConnect={true}
     >
-      <ChakraProvider>
         <Layout>
           <Header />
           <Game />
           <Controls />
         </Layout>
-      </ChakraProvider>
     </WalletProvider>
   );
 }

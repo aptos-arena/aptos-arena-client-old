@@ -1,27 +1,35 @@
-import { HStack, Text, VStack } from '@chakra-ui/react'
 import React from 'react'
-import Jump from './Jump'
 
-import Movement from './Movement'
-import Shoot from './Shoot'
+import { Heading, HStack, VStack } from '@chakra-ui/react'
+
+import Control from './Control'
+import { controls } from './controls'
 
 const Controls: React.FC = () => {
   return (
     <VStack
-        spacing={4}
+        spacing={8}
     >
-        <Text
+        <Heading
             fontSize="xl"
             fontWeight="bold"
+            color='blue.100'
         >
             Controls
-        </Text>
+        </Heading>
         <HStack
             spacing={8}
+            w='100%'
+            justifyContent='space-around'
         >
-            <Movement />
-            <Jump />
-            <Shoot />
+            {
+                controls.map((control, index) => (
+                    <Control 
+                        key={index}
+                        control={control}
+                    />
+                ))
+            }
         </HStack>
     </VStack>
   )

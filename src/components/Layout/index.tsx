@@ -15,7 +15,7 @@ const Layout: React.FC<Props> = ({ children }) => {
         <Box
             minHeight='100vh'
             minWidth='100vw'
-            bg={bgColor}
+            bg='navy.900'
         >
             <Navbar />
             <Container

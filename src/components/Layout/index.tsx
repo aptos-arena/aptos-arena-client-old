@@ -13,14 +13,14 @@ const Layout: React.FC<Props> = ({ children }) => {
         <Box
             minHeight='100vh'
             minWidth='100vw'
-            bg='navy.900'
+            bg='#1A202C'
         >
             <Navbar />
             <Container
                 maxW='4xl'
                 display='flex'
                 flexDirection='column'
-                pt={navbarHeight + 8}
+                pt={navbarHeight}
                 pb={16}
                 gap={8}
             >

@@ -8,7 +8,7 @@ const Header: React.FC = () => {
         <Heading
             fontSize="4xl"
             fontWeight="bold"
-            color='blue.100'
+            color='blue.200'
         >
             Aptos Arena
         </Heading>

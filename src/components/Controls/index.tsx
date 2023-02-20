@@ -13,7 +13,7 @@ const Controls: React.FC = () => {
         <Heading
             fontSize="xl"
             fontWeight="bold"
-            color='blue.100'
+            color='blue.200'
         >
             Controls
         </Heading>

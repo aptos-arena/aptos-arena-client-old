@@ -18,6 +18,7 @@ const Control: React.FC<Props> = ({ control }) => {
             <Text
                 fontSize='sm'
                 fontWeight='semibold'
+                color='blue.200'
             >
                 {control.name}
             </Text>
@@ -28,8 +29,8 @@ const Control: React.FC<Props> = ({ control }) => {
                             key={key}
                             fontSize='16px'
                             fontFamily={`'Press Start 2P', sans-serif`}
-                            // bg='blue.100'
-                            color='blue.100'
+                            color='blue.200'
+                            bg='transparent'
                             p={2}
                         >
                             {key}

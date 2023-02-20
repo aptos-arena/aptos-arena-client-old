@@ -9,8 +9,6 @@ interface Props {
 
 const Layout: React.FC<Props> = ({ children }) => {
 
-    const bgColor = useColorModeValue('gray.50', 'navy.900');
-
     return (
         <Box
             minHeight='100vh'

@@ -1,23 +1,54 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-import { ChakraProvider, Container } from '@chakra-ui/react';
-import Header from './components/Header';
+import { ChakraProvider } from '@chakra-ui/react';
+
 import Game from './components/Game';
 
-function App() {
+import {
+  PontemWalletAdapter, 
+  AptosWalletAdapter,
+  WalletAdapter,
+  MartianWalletAdapter,
+  RiseWalletAdapter,
+  WalletProvider
+} from '@manahippo/aptos-wallet-adapter';
+import Layout from './components/Layout';
+import Controls from './components/Controls';
+import Header from './components/Header';
+
+
+const App: React.FC = () => {
+
+  const [wallets, setWallets] = useState<WalletAdapter[]>([]);
+  const [loaded, setLoaded] = useState<boolean>(false);
+
+  useEffect(() => {
+    setWallets([
+      new PontemWalletAdapter(),
+      new RiseWalletAdapter(),
+      new AptosWalletAdapter(),
+      new MartianWalletAdapter(),
+    ])
+    setLoaded(true);
+  }, [])
+
+  if (!loaded) {
+    return null;
+  }
+
   return (
-    <ChakraProvider>
-      <Container
-        py={16}
-        maxW='4xl'
-        display='flex'
-        flexDirection='column'
-        gap={8}
-      >
-        <Header />
-        <Game />
-      </Container>
-    </ChakraProvider>
+    <WalletProvider
+      wallets={wallets}
+      autoConnect={true}
+    >
+      <ChakraProvider>
+        <Layout>
+          <Header />
+          <Game />
+          <Controls />
+        </Layout>
+      </ChakraProvider>
+    </WalletProvider>
   );
 }
 

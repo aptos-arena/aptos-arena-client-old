@@ -61,19 +61,26 @@ const ConnectWallet: React.FC = () => {
             <MenuButton
                 py={2}
                 transition="all 0.3s"
+                // bg='#1A202C'
+                colorScheme='transparent'
+                color='white'
                 size='sm'
-                _focus={{ boxShadow: 'none' }}
                 as={mobileView ? IconButton : Button} 
-                colorScheme={connected ? 'brand': 'gray'}
-                variant={connected ? 'outline' : 'solid'}
+                variant={'solid'}
                 rightIcon={!mobileView ? <ChevronDownIcon /> : undefined}
                 leftIcon={!mobileView ? <FaWallet /> : undefined}
                 icon={mobileView ? <FaWallet /> : undefined}
+                // _hover={{
+                //     bg: 'whiteAlpha.100',
+                // }}
+                // _selected={{
+                //     bg: 'whiteAlpha.100',
+                // }}
             >
                 {(connected ? ellipsize(account?.address?.toString().slice(2), 4, 4) : 'Connect Wallet')}
             </MenuButton>
             <MenuList
-                bg='navy.800'
+                bg='#1A202C'
             >
                 {
                     connected ? (
@@ -81,6 +88,7 @@ const ConnectWallet: React.FC = () => {
                             <MenuItem
                                 onClick={copy}
                                 bg='transparent'
+                                color='white'
                                 _hover={{
                                     bg: 'whiteAlpha.100',
                                 }}
@@ -90,6 +98,7 @@ const ConnectWallet: React.FC = () => {
                             <MenuItem
                                 onClick={() => disconnect()}
                                 bg='transparent'
+                                color='white'
                                 _hover={{
                                     bg: 'whiteAlpha.100',
                                 }}
@@ -106,6 +115,7 @@ const ConnectWallet: React.FC = () => {
                                 fontWeight="medium"
                                 alignItems='center'
                                 bg='transparent'
+                                color='white'
                                 _hover={{
                                     bg: 'whiteAlpha.100',
                                 }}

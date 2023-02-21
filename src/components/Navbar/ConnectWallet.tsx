@@ -121,7 +121,7 @@ const ConnectWallet: React.FC = () => {
                                 >
                                     {wallet.adapter.name}
                                     {
-                                        (wallet.adapter.name === 'Pontem' || wallet.adapter.name === 'Rise Wallet') && (
+                                        wallet.adapter.name === 'Pontem' && (
                                             <Flex
                                                 alignItems='center'
                                                 bg='green.500'

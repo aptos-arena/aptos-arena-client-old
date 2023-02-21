@@ -70,12 +70,6 @@ const ConnectWallet: React.FC = () => {
                 rightIcon={!mobileView ? <ChevronDownIcon /> : undefined}
                 leftIcon={!mobileView ? <FaWallet /> : undefined}
                 icon={mobileView ? <FaWallet /> : undefined}
-                // _hover={{
-                //     bg: 'whiteAlpha.100',
-                // }}
-                // _selected={{
-                //     bg: 'whiteAlpha.100',
-                // }}
             >
                 {(connected ? ellipsize(account?.address?.toString().slice(2), 4, 4) : 'Connect Wallet')}
             </MenuButton>

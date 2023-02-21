@@ -29,6 +29,7 @@ const Control: React.FC<Props> = ({ control }) => {
                         control.keys.map((key) => (
                             <Key
                                 key={key}
+                                keyDisplay={key}
                             />
                         ))
                     }

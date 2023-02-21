@@ -3,10 +3,10 @@ import React from 'react'
 import { Kbd } from '@chakra-ui/react'
 
 interface Props {
-    key: string
+    keyDisplay: string
 }
 
-const Key: React.FC<Props> = ({ key }) => {
+const Key: React.FC<Props> = ({ keyDisplay }) => {
 
     return (
         <Kbd
@@ -17,7 +17,7 @@ const Key: React.FC<Props> = ({ key }) => {
             p={2}
             tabIndex={-1}
         >
-            {key}
+            {keyDisplay}
         </Kbd>
     )
 }

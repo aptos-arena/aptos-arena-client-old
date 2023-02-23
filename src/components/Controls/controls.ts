@@ -10,14 +10,22 @@ export const controls: ControlType[] = [
     },
     {
         name: 'Jump',
-        keys: ['↑']
+        keys: ['SPACE']
     },
     {
         name: 'Drop',
         keys: ['↓']
     },
     {
-        name: 'Shoot',
+        name: 'Pick Weapon',
+        keys: ['1', '2', '3']
+    },
+    {
+        name: 'Attack',
         keys: ['Right Shift']
+    },
+    {
+        name: 'Pause',
+        keys: ['Escape']
     }
 ]

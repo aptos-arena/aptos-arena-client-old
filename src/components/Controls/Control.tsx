@@ -18,9 +18,11 @@ const Control: React.FC<Props> = ({ control }) => {
         >
             <VStack>
                 <Text
-                    fontSize='sm'
+                    fontSize='xs'
                     fontWeight='semibold'
                     color='blue.200'
+                    textAlign='center'
+                    whiteSpace='nowrap'
                 >
                     {control.name}
                 </Text>

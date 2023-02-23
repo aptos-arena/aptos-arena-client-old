@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Card, CircularProgress, Flex } from '@chakra-ui/react';
+import { Card, CircularProgress } from '@chakra-ui/react';
 
 import { useUnityContext, Unity } from 'react-unity-webgl';
 

@@ -1,10 +1,12 @@
 import React from 'react'
 
-import { Heading, VStack } from '@chakra-ui/react'
+import { Heading, VStack, Text } from '@chakra-ui/react'
 
 const Header: React.FC = () => {
   return (
-    <VStack>
+    <VStack
+      spacing={4}
+    >
         <Heading
             fontSize="4xl"
             fontWeight="bold"
@@ -12,6 +14,11 @@ const Header: React.FC = () => {
         >
             Aptos Arena
         </Heading>
+        <Text
+          color='white'
+        >
+          Win by knocking your opponents off the stage!
+        </Text>
     </VStack>
   )
 }

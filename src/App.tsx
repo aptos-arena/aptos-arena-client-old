@@ -41,8 +41,8 @@ const App: React.FC = () => {
     >
         <Layout>
           <Header />
-          <Game />
           <Controls />
+          <Game />
         </Layout>
     </WalletProvider>
   );

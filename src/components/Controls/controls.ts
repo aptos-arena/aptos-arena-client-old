@@ -6,7 +6,7 @@ export interface ControlType {
 export const controls: ControlType[] = [
     {
         name: 'Move',
-        keys: ['←', '→']
+        keys: ['A', 'D']
     },
     {
         name: 'Jump',
@@ -14,7 +14,7 @@ export const controls: ControlType[] = [
     },
     {
         name: 'Drop',
-        keys: ['↓']
+        keys: ['S']
     },
     {
         name: 'Pick Weapon',

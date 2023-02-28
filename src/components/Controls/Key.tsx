@@ -12,7 +12,7 @@ const Key: React.FC<Props> = ({ keyDisplay }) => {
         <Kbd
             fontSize='16px'
             fontFamily={`'Press Start 2P', sans-serif`}
-            color='blue.200'
+            color='white'
             bg='trasparent'
             p={2}
             tabIndex={-1}

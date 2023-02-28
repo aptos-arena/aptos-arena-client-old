@@ -20,7 +20,7 @@ const Control: React.FC<Props> = ({ control }) => {
                 <Text
                     fontSize='xs'
                     fontWeight='semibold'
-                    color='blue.200'
+                    color='white'
                     textAlign='center'
                     whiteSpace='nowrap'
                 >

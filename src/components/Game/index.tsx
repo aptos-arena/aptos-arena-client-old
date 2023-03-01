@@ -13,7 +13,7 @@ const Game: React.FC = () => {
         dataUrl: "/build/AptosArena.data",
         frameworkUrl: "/build/AptosArena.framework.js",
         codeUrl: "/build/AptosArena.wasm"
-    });    
+    });
     
     return (
         <Card

@@ -16,8 +16,9 @@ const Header: React.FC = () => {
         </Heading>
         <Text
           color='white'
+          textAlign='center'
         >
-          Win by knocking your opponents off the stage!
+          Compete as your favorite Aptos NFT holders to knock opponents off the stage!
         </Text>
     </VStack>
   )

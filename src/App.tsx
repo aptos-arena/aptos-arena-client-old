@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-import Game from './components/Game';
 
 import {
   PontemWalletAdapter, 
@@ -10,9 +9,11 @@ import {
   RiseWalletAdapter,
   WalletProvider
 } from '@manahippo/aptos-wallet-adapter';
+
 import Layout from './components/Layout';
-import Controls from './components/Controls';
+import Game from './components/Game';
 import Header from './components/Header';
+import Fighters from './components/Fighters';
 
 
 const App: React.FC = () => {
@@ -41,7 +42,7 @@ const App: React.FC = () => {
     >
         <Layout>
           <Header />
-          <Controls />
+          <Fighters />
           <Game />
         </Layout>
     </WalletProvider>

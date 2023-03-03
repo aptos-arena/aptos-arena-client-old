@@ -51,14 +51,7 @@ const FighterModal: React.FC<Props> = ({ fighter, isOpen, onClose, onSelect }) =
                         stats={fighter.stats}
                     />
                 </ModalBody>
-                <ModalFooter>
-                    <Button
-                        bg='blue.200'
-                        onClick={onSelect}
-                    >
-                        Select
-                    </Button>
-                </ModalFooter>
+                <ModalFooter />
             </ModalContent>
         </Modal>
     );

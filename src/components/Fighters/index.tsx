@@ -46,13 +46,6 @@ const Fighters = () => {
                     ))
                 }
             </Flex>
-            <Button
-                bg='blue.200'
-                onClick={() => console.log(selectedFighter)}
-                isDisabled={selectedFighter === null}
-            >
-                Play
-            </Button>
         </Flex>
     );
 };

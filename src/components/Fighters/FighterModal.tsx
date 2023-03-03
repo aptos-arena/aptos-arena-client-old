@@ -1,7 +1,6 @@
 import React from 'react';
 
 import {
-    Button,
     Heading,
     Image,
     Modal,
@@ -10,6 +9,7 @@ import {
     ModalFooter,
     ModalHeader,
     ModalOverlay,
+    Box
 } from "@chakra-ui/react";
 
 import FighterStats from "./FighterStats";
@@ -23,7 +23,7 @@ interface Props {
     onSelect: () => void
 }
 
-const FighterModal: React.FC<Props> = ({ fighter, isOpen, onClose, onSelect }) => {
+const FighterModal: React.FC<Props> = ({ fighter, isOpen, onClose }) => {
     return (
         <Modal
             isOpen={isOpen}
@@ -35,9 +35,27 @@ const FighterModal: React.FC<Props> = ({ fighter, isOpen, onClose, onSelect }) =
                 bg='#1A202C'
                 overflow='hidden'
             >
-                <Image
-                    src={fighter.collectionImage}
-                />
+                <Box
+                    position='relative'
+                >
+                    <Image
+                        src={fighter.collectionBackgroundImage}
+                        position='absolute'
+                        top={0}
+                        left={0}
+                        // w='100%'
+                        // h='100%'
+                        objectFit='cover'
+                        zIndex={-1}
+                        filter='blur(0.5px)'
+
+                    />
+                    <Image
+                        src={fighter.collectionImage}
+                    />
+                </Box>
+
+
                 <ModalHeader>
                     <Heading
                         color='blue.200'

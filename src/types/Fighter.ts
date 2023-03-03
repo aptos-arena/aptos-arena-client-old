@@ -1,6 +1,7 @@
 export interface Fighter {
     collectionName: string;
     collectionImage: string;
+    collectionBackgroundImage: string;
     stats: Stats;
 }
 

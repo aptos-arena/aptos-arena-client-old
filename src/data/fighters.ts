@@ -3,7 +3,9 @@ import { Fighter } from '../types/Fighter'
 const fighters: Fighter[] = [
     {
         collectionName: 'Pontem Pirates',
-        collectionImage: '/Pontem Pirate.png',
+        collectionImage: '/PontemPirate.png',
+        collectionBackgroundImage: '/PontemPirateBackdrop.jpg',
+
         stats: {
             speed: 3,
             strength: 7,
@@ -12,7 +14,8 @@ const fighters: Fighter[] = [
     },
     {
         collectionName: "Aptos Monkeys",
-        collectionImage: "/Aptos Monkey.png",
+        collectionImage: "/AptosMonkey.png",
+        collectionBackgroundImage: "/AptosMonkeyBackdrop.jpg",
         stats: {
             speed: 8,
             strength: 4,

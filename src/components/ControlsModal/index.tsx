@@ -22,7 +22,7 @@ const Controls: React.FC<Props> = ({ isOpen, onClose }) => {
       <Modal
           isOpen={isOpen}
           onClose={onClose}
-          size='xl'
+          size='md'
           isCentered
       >
           <ModalOverlay />
@@ -41,8 +41,8 @@ const Controls: React.FC<Props> = ({ isOpen, onClose }) => {
               </ModalHeader>
               <ModalBody>
                   <SimpleGrid
-                      columns={2}
-                      spacing={8}
+                      columns={1}
+                      spacing={4}
                       w='100%'
                   >
                       {

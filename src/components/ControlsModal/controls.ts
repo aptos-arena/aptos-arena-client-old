@@ -1,31 +1,47 @@
-export interface ControlType {
-    name: string
-    keys: string[]
+export interface Controls {
+    keys: Key[]
 }
 
-export const controls: ControlType[] = [
+export interface Key {
+    name: string
+    key: string
+}
+
+export const controls: Controls[] = [
     {
-        name: 'Move',
-        keys: ['A', 'D']
+        keys: [
+            {
+                name: 'Jump',
+                key: '↑'
+            }
+        ]
     },
     {
-        name: 'Jump',
-        keys: ['SPACE']
+        keys: [
+            {
+                name: 'Left',
+                key: '←'
+            },
+            {
+                name: 'Drop',
+                key: '↓'
+            },
+            {
+                name: 'Right',
+                key: '→'
+            }
+        ]
     },
     {
-        name: 'Drop',
-        keys: ['S']
-    },
-    {
-        name: 'Pick Weapon',
-        keys: ['1', '2', '3']
-    },
-    {
-        name: 'Attack',
-        keys: ['Right Shift']
-    },
-    {
-        name: 'Pause',
-        keys: ['Escape']
+        keys: [
+            {
+                name: 'Shoot',
+                key: '1'
+            },
+            {
+                name: 'Melee',
+                key: '2'
+            },
+        ]
     }
 ]

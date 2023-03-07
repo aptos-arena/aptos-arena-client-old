@@ -2,11 +2,11 @@ import React from 'react'
 
 import { VStack, HStack, Text, Flex } from '@chakra-ui/react'
 
-import { ControlType } from './controls'
+import { Controls } from './controls'
 import Key from './Key'
 
 interface Props {
-    control: ControlType
+    control: Controls
 }
 
 const Control: React.FC<Props> = ({ control }) => {
@@ -16,27 +16,16 @@ const Control: React.FC<Props> = ({ control }) => {
             flex={1}
             justifyContent='center'
         >
-            <VStack>
-                <Text
-                    fontSize='xs'
-                    fontWeight='semibold'
-                    color='white'
-                    textAlign='center'
-                    whiteSpace='nowrap'
-                >
-                    {control.name}
-                </Text>
-                <HStack>
-                    {
-                        control.keys.map((key) => (
-                            <Key
-                                key={key}
-                                keyDisplay={key}
-                            />
-                        ))
-                    }
-                </HStack>
-            </VStack>
+            <HStack>
+                {
+                    control.keys.map((key) => (
+                        <Key
+                            keyData={key}
+                            key={key.key}
+                        />
+                    ))
+                }
+            </HStack>
         </Flex>
     )
 }

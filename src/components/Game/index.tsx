@@ -60,7 +60,7 @@ const Game: React.FC = () => {
                         isLoaded && (
                             <VStack
                                 top={2}
-                                right={2}
+                                left={2}
                                 position='absolute'
                                 align='flex-end'
                             >

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {Button, Card, CircularProgress, IconButton, useDisclosure, VStack} from '@chakra-ui/react';
+import {Button, Card, CircularProgress, HStack, IconButton, useDisclosure, VStack} from '@chakra-ui/react';
 
 import { AiOutlineFullscreen } from 'react-icons/ai';
 import { GiRetroController } from 'react-icons/gi';
@@ -25,14 +25,25 @@ const Game: React.FC = () => {
             <VStack
                 spacing={8}
             >
-                <Button
-                    onClick={onOpen}
-                    leftIcon={<GiRetroController />}
-                    color='#1A202C'
-                    bg='blue.200'
-                >
-                    Controls
-                </Button>
+                <HStack>
+                    <Button
+                        onClick={onOpen}
+                        leftIcon={<GiRetroController />}
+                        color='#1A202C'
+                        bg='blue.200'
+                    >
+                        Controls
+                    </Button>
+                    <Button
+                        aria-label='Fullscreen'
+                        leftIcon={<AiOutlineFullscreen />}
+                        onClick={() => requestFullscreen(true)}
+                        color='#1A202C'
+                        bg='blue.200'
+                    >
+                        Fullscreen
+                    </Button>
+                </HStack>
                 <Card
                     shadow='lg'
                     position='relative'
@@ -54,24 +65,6 @@ const Game: React.FC = () => {
                                 top='50%'
                                 transform='translate(-50%, -50%)'
                             />
-                        )
-                    }
-                    {
-                        isLoaded && (
-                            <VStack
-                                top={2}
-                                left={2}
-                                position='absolute'
-                                align='flex-end'
-                            >
-                                <IconButton
-                                    aria-label='Fullscreen'
-                                    icon={<AiOutlineFullscreen />}
-                                    onClick={() => requestFullscreen(true)}
-                                    color='#1A202C'
-                                    bg='blue.200'
-                                />
-                            </VStack>
                         )
                     }
                     <Unity

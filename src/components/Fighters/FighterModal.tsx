@@ -9,7 +9,7 @@ import {
     ModalFooter,
     ModalHeader,
     ModalOverlay,
-    Box
+    Box, Button
 } from "@chakra-ui/react";
 
 import FighterStats from "./FighterStats";
@@ -43,19 +43,14 @@ const FighterModal: React.FC<Props> = ({ fighter, isOpen, onClose }) => {
                         position='absolute'
                         top={0}
                         left={0}
-                        // w='100%'
-                        // h='100%'
                         objectFit='cover'
                         zIndex={-1}
                         filter='blur(0.5px)'
-
                     />
                     <Image
                         src={fighter.collectionImage}
                     />
                 </Box>
-
-
                 <ModalHeader>
                     <Heading
                         color='blue.200'
@@ -69,7 +64,21 @@ const FighterModal: React.FC<Props> = ({ fighter, isOpen, onClose }) => {
                         stats={fighter.stats}
                     />
                 </ModalBody>
-                <ModalFooter />
+                <ModalFooter
+                    justifyContent='center'
+                >
+                    <a
+                        href={fighter.marketplaceURL}
+                        target='_blank'
+                    >
+                        <Button
+                            size='sm'
+                            bg='blue.200'
+                        >
+                            Browse
+                        </Button>
+                    </a>
+                </ModalFooter>
             </ModalContent>
         </Modal>
     );

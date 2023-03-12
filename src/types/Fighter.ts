@@ -3,6 +3,7 @@ export interface Fighter {
     collectionImage: string;
     collectionBackgroundImage: string;
     stats: Stats;
+    marketplaceURL: string
 }
 
 export const statMetrics = ['speed', 'strength', 'defense'] as const;

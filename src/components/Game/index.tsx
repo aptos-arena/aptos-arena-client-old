@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {Button, Card, CircularProgress, HStack, IconButton, useDisclosure, VStack} from '@chakra-ui/react';
+import {Button, Card, CircularProgress, HStack, useDisclosure, VStack} from '@chakra-ui/react';
 
 import { AiOutlineFullscreen } from 'react-icons/ai';
 import { GiRetroController } from 'react-icons/gi';
@@ -25,7 +25,10 @@ const Game: React.FC = () => {
             <VStack
                 spacing={8}
             >
-                <HStack>
+                <HStack
+                    w='100%'
+                    justifyContent='center'
+                >
                     <Button
                         onClick={onOpen}
                         leftIcon={<GiRetroController />}

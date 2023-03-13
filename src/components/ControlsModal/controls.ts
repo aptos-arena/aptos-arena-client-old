@@ -36,11 +36,11 @@ export const controls: Controls[] = [
         keys: [
             {
                 name: 'Shoot',
-                key: '1'
+                key: 'Space'
             },
             {
                 name: 'Melee',
-                key: '2'
+                key: 'L. Shift'
             },
         ]
     }
